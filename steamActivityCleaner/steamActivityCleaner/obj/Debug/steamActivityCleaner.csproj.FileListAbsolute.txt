@@ -1,0 +1,7 @@
+C:\Users\hotas\source\repos\steamActivityCleaner\steamActivityCleaner\bin\Debug\steamActivityCleaner.exe.config
+C:\Users\hotas\source\repos\steamActivityCleaner\steamActivityCleaner\bin\Debug\steamActivityCleaner.exe
+C:\Users\hotas\source\repos\steamActivityCleaner\steamActivityCleaner\bin\Debug\steamActivityCleaner.pdb
+C:\Users\hotas\source\repos\steamActivityCleaner\steamActivityCleaner\obj\Debug\steamActivityCleaner.csprojResolveAssemblyReference.cache
+C:\Users\hotas\source\repos\steamActivityCleaner\steamActivityCleaner\obj\Debug\steamActivityCleaner.csproj.CoreCompileInputs.cache
+C:\Users\hotas\source\repos\steamActivityCleaner\steamActivityCleaner\obj\Debug\steamActivityCleaner.exe
+C:\Users\hotas\source\repos\steamActivityCleaner\steamActivityCleaner\obj\Debug\steamActivityCleaner.pdb
