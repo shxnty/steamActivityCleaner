@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System;
 using System.Diagnostics;
 using System.Threading;
 
@@ -10,41 +6,38 @@ namespace steamActivityCleaner
 {
     static class Program
     {
-        static int x = 0;
         static void Main(string[] args)
         {
             Console.Title = "Steam Activity Cleaner";
-            Console.WriteLine("Starting program");
-            Console.WriteLine();
-            Console.WriteLine("Starting AppID 635240");
-            var process = Process.Start("steam://run/635240/");
-            while (!IsRunning("html5app_steam"))
-                Thread.Sleep(10);
-            Console.WriteLine("Starting AppID 635241");
-            process = Process.Start("steam://run/635241/");
-            while (!IsRunning("html5app_steam"))
-                Thread.Sleep(10);
-            Console.WriteLine("Starting AppID 635242");
-            process = Process.Start("steam://run/635242/");
-            while (!IsRunning("html5app_steam"))
-                Thread.Sleep(10);
-            Console.WriteLine();
-            Console.Write("Activity cleared.");
-            Console.Read();
+            Console.Write("Starting AppID 635240");
+            run("steam://run/635240/");;
+            Console.Write("\nStarting AppID 635241");
+            run("steam://run/635241/");
+            Console.Write("\nStarting AppID 635242");
+            run("steam://run/635242/");
+            Console.Write("\nYour activity should be cleared, if it has not been run the program again.");
+            Thread.Sleep(10000);
+            Environment.Exit(0);
         }
 
-        static bool IsRunning(string proc)
+        static void run(string proc)
         {
-            Process[] processes = Process.GetProcesses();
-            foreach (var process in processes)
+            Process.Start(proc);
+            bool isRunning = false;
+            while (!isRunning)
             {
-                if (process.MainWindowTitle == "Steam Video Player")
+                Process[] processes = Process.GetProcesses();
+                foreach (var process in processes)
                 {
-                    process.Kill();
-                    return true;
+                    if (process.MainWindowTitle == "Steam Video Player")
+                    {
+                        process.Kill();
+                        isRunning = true;
+                        break;
+                    }
                 }
-            }
-            return false;
+                Thread.Sleep(10);
+            } 
         }
     }
 }
