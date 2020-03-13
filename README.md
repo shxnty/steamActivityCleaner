@@ -1,4 +1,7 @@
 # steamActivityCleaner
+
+**This is now redundant, you can hide your game activity on Steam.** 
+
 Program to clean steam recent activity, should be straight forward
 
 If you have any questions, hmu on discord at shanty#0001 or steam id/shxnty
